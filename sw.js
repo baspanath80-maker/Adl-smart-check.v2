@@ -1,4 +1,4 @@
-const CACHE_NAME = "adhd-smart-check-v2";
+const CACHE_NAME = "adhd-smart-check-v1";
 
 // รายการไฟล์ที่ต้องการให้ Cache ไว้ทันทีที่ติดตั้ง (รวม External CDNs)
 const APP_FILES = [
@@ -50,7 +50,6 @@ self.addEventListener("fetch", (event) => {
     caches.match(event.request).then((cachedResponse) => {
       // 1. ถ้ามีใน Cache ให้ดึงจาก Cache มาใช้ทันที
       if (cachedResponse) {
-
         return cachedResponse;
       }
 
